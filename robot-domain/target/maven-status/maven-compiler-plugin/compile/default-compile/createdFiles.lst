@@ -1,0 +1,5 @@
+com/robot/domain/model/Command.class
+com/robot/domain/repository/CommandRepository.class
+com/robot/domain/model/Command$CommandBuilder.class
+com/robot/domain/model/Command$CommandStatus.class
+com/robot/domain/service/CommandProcessService.class

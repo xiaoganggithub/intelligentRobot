@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: robot-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: ${spring.profiles.active}
+        group: DEFAULT_GROUP
+        service: ${spring.application.name}
+        heart-beat-interval: 5000
+        heart-beat-timeout: 15000
+        ip-delete-timeout: 30000
+        register-enabled: true
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml
+        namespace: ${spring.profiles.active}
+        group: DEFAULT_GROUP
+        prefix: ${spring.application.name}
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+      eager: true
+      enabled: true
+      web-context-unify: true
+      filter:
+        enabled: true
+      datasource:
+        ds:
+          nacos:
+            server-addr: 127.0.0.1:8848
+            dataId: ${spring.application.name}-sentinel
+            groupId: DEFAULT_GROUP
+            rule-type: flow
+
+robot:
+  api:
+    base-url: http://localhost:8080/api
+  rate-limit:
+    qps: 100
+    max-queueing-time-ms: 500
+    warm-up-period-sec: 10
+    max-waiting-time: 1000
+    resource-name: robot-api

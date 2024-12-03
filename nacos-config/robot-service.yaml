@@ -1,0 +1,13 @@
+robot:
+  api:
+    connect-timeout: 5000
+    read-timeout: 10000
+    max-retries: 3
+    retry-interval: 1000
+  redis:
+    command-expire-minutes: 5
+    result-expire-minutes: 5
+  rate-limit:
+    enabled: true
+    command-limit-per-minute: 100
+    limit-mode: REJECT

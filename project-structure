@@ -1,0 +1,6 @@
+robot-service/
+├── robot-api                 # API接口模块
+├── robot-application        # 应用层
+├── robot-domain            # 领域层
+├── robot-infrastructure    # 基础设施层
+└── robot-starter          # 启动模块 

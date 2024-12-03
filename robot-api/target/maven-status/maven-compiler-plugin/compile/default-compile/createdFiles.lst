@@ -1,0 +1,11 @@
+com/robot/api/model/HealthCheckResponse$ServiceInfo$ServiceInfoBuilder.class
+com/robot/api/model/HealthCheckResponse$SystemInfo.class
+com/robot/api/model/HealthCheckResponse$SystemInfo$SystemInfoBuilder.class
+com/robot/api/service/HealthCheckService.class
+com/robot/api/model/HealthCheckResponse$ServiceInfo.class
+com/robot/api/controller/RobotController.class
+com/robot/api/model/ErrorResponse.class
+com/robot/api/model/HealthCheckResponse.class
+com/robot/api/model/ErrorResponse$ErrorResponseBuilder.class
+com/robot/api/exception/GlobalExceptionHandler.class
+com/robot/api/model/HealthCheckResponse$HealthCheckResponseBuilder.class
